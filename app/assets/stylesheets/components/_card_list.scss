@@ -1,7 +1,7 @@
 .card_list {
   background-size: cover;
   background-position: center;
-  background-image: url("https://media.istockphoto.com/id/599124142/photo/retro-movie-camera-on-a-tripod.webp?b=1&s=170667a&w=0&k=20&c=WKWH8whqiO79RPYvdHsg7WkCqFUsWPUQ6nDEKoz-W0M=");
+  background-image: url("https://images.unsplash.com/photo-1615414015111-8d98cb65677e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   height: 180px;
   display: flex;
   justify-content: center;
@@ -28,4 +28,92 @@
 .list_lists {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.hold_button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  .btn {
+    margin: 5px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.cards {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-category {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px;
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card_info {
+    padding: 19px;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+
+  }
+
+}
+
+#title {
+  font-weight: bold;
+}
+
+.footer_card {
+  display: flex;
+  justify-content: space-between;
+  }

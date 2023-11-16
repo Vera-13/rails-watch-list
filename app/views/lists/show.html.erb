@@ -1,14 +1,44 @@
-<h1>Hello Sunshine!</h1>
-<%= @list.name %>
-<%= link_to "Create a bookmark", new_bookmark_path %> | <%= link_to "Go Back To Lists", root_path %>
-<div class="container">
-  <% @list.bookmarks.each do |book| %>
-    <%= book.comment %>
-    <%= book.movie.title %>
-    <%= book.movie.overview %>
-    <%= book.movie.rating %>
-    <%= image_tag book.movie.poster_url, alt: 'poster_movie'%>
+<div class="navbar">
+  <i class="fa-solid fa-film"></i>
+  <div class="links">
+    <%= link_to "My lists", root_path %>
+    <%= link_to "New list", lists_new_path  %>
+  </div>
+  </div>
 
-    <%= link_to "Delete",bookmark_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-  <% end %>
+  <div class="banner2">
+    <div class="container">
+      <h1><%= @list.name %></h1>
+    </div>
 </div>
+
+
+<div class="hold_button">
+  <div class="btn btn-success">
+    <%= link_to "Add movie", new_bookmark_path %>
+  </div>
+   <div class="btn btn-success">
+    <%= link_to "Go Back To Lists", root_path %>
+  </div>
+
+</div>
+
+
+
+<% @list.bookmarks.each do |book| %>
+ <div class="cards">
+    <div class="card-category">
+      <%= image_tag book.movie.poster_url, alt: 'poster_movie'%>
+        <div class="card-info">
+          <div class="div-title">
+            <span id="title"><%= book.movie.title %></span> - <%= book.movie.rating %> <i class="fa-solid fa-star"></i>
+          </div>
+            <%= book.movie.overview %>
+          <div class="footer-card">
+            <%= book.comment %>
+            <%= link_to "Delete",bookmark_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+          </div>
+        </div>
+    </div>
+ </div>
+<% end %>
