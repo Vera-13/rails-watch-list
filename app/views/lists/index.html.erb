@@ -1,0 +1,29 @@
+<div class="navbar">
+  <i class="fa-solid fa-film"></i>
+  <div class="links">
+    <%= link_to "My lists", lists_path %>
+    <%= link_to "New list", lists_new_path  %>
+  </div>
+  </div>
+</div>
+<div class="banner">
+<div class="container">
+  <h1>Save any kind of movies</h1>
+  <h2>Classic</h2>
+  </div>
+</div>
+<div class="btn">
+  <%= link_to "Create a movie list", lists_new_path %>
+</div>
+<div class="boxy_thingy">
+  <h2 id="my_lists">My Lists</h2>
+  <div class="list_lists">
+  <% @lists.each do |list| %>
+    <div class="card_list">
+      <div class="div">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

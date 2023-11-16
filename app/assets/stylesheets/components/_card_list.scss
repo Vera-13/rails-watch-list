@@ -1,0 +1,31 @@
+.card_list {
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://media.istockphoto.com/id/599124142/photo/retro-movie-camera-on-a-tripod.webp?b=1&s=170667a&w=0&k=20&c=WKWH8whqiO79RPYvdHsg7WkCqFUsWPUQ6nDEKoz-W0M=");
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin: 20px;
+  width: 350px;
+  a {
+    color:white;
+  }
+}
+
+
+.boxy_thingy {
+  margin: 30px;
+  #my_lists {
+    margin-left: 28px;
+  }
+}
+
+.list_lists {
+  display: flex;
+  justify-content: space-around;
+}

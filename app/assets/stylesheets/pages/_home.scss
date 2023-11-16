@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+$gray: #F4F4F4; // Defining a variable
+$spacer: 8px;
+body {
+  background: $gray; // Using this variable
+}
+
+p {
+  padding: $spacer ($spacer * 3);
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: black;
+}

@@ -1,0 +1,14 @@
+<h1>Hello Sunshine!</h1>
+<%= @list.name %>
+<%= link_to "Create a bookmark", new_bookmark_path %> | <%= link_to "Go Back To Lists", root_path %>
+<div class="container">
+  <% @list.bookmarks.each do |book| %>
+    <%= book.comment %>
+    <%= book.movie.title %>
+    <%= book.movie.overview %>
+    <%= book.movie.rating %>
+    <%= image_tag book.movie.poster_url, alt: 'poster_movie'%>
+
+    <%= link_to "Delete",bookmark_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+  <% end %>
+</div>
