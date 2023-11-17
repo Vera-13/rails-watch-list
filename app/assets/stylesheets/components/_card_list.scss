@@ -1,7 +1,6 @@
 .card_list {
   background-size: cover;
   background-position: center;
-  background-image: url("https://images.unsplash.com/photo-1615414015111-8d98cb65677e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   height: 180px;
   display: flex;
   justify-content: center;
@@ -20,6 +19,7 @@
 
 .boxy_thingy {
   margin: 30px;
+
   #my_lists {
     margin-left: 28px;
   }
@@ -29,6 +29,24 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  .one_card {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 20px;
+  }
+
 }
 
 .hold_button {
@@ -95,4 +113,19 @@
 #title {
   padding-left: 10px;
   font-weight: bold;
+}
+
+.card-banner {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
