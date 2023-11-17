@@ -25,20 +25,28 @@
 
 
 
-<% @list.bookmarks.each do |book| %>
  <div class="cards">
+  <% @list.bookmarks.each do |book| %>
     <div class="card-category">
       <%= image_tag book.movie.poster_url, alt: 'poster_movie'%>
         <div class="card-info">
           <div class="div-title">
             <span id="title"><%= book.movie.title %></span> - <%= book.movie.rating %> <i class="fa-solid fa-star"></i>
           </div>
-            <%= book.movie.overview %>
-          <div class="footer-card">
+          <div class="info">
+            <div>
+              <%= book.movie.overview %>
+            </div>
+            <div class="foots">
+            <span>
+            <i class="fa-solid fa-quote-left"></i>
             <%= book.comment %>
+            </span>
             <%= link_to "Delete",bookmark_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+
+          </div>
           </div>
         </div>
     </div>
- </div>
-<% end %>
+  <% end %>
+</div>
